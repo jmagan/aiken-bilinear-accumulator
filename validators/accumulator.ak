@@ -41,13 +41,13 @@ validator bilinear_accumulator {
           redeemer.subset,
           g2_decompress(proof),
         )
-      NonMembership((proof_1st, proof_2st)) ->
+      NonMembership((proof_1st, proof_2nd)) ->
         check_nonmembership(
           map(redeemer.setup, g1_decompress),
           g2,
           g2_decompress(datum.accumulator),
           redeemer.subset,
-          (g1_decompress(proof_1st), g2_decompress(proof_2st)),
+          (g1_decompress(proof_1st), g2_decompress(proof_2nd)),
         )
     }
   }
